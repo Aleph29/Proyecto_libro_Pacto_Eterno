@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagrama · Si diereis oído a mi voz</title>
+<meta name="description" content="Mapa visual de los hilos temáticos (escuchar, ley, santuario, sacerdocio, esposo) a lo largo de las seis partes del libro.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128123;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>/* ---------------------------------------------------------------
+   Si diereis oído a mi voz — plan del libro
+   Paleta: papel (crema cálido), tinta (casi negro cálido),
+   índigo de pacto (acento primario), bronce (acento secundario).
+   Tipografía: Fraunces (títulos) + Source Serif 4 (cuerpo).
+   --------------------------------------------------------------- */
+
+:root {
+  --paper: #FAF7F0;
+  --paper-raised: #F3EEE1;
+  --ink: #241F18;
+  --ink-quiet: #6B6154;
+  --covenant: #2F4B6E;
+  --covenant-quiet: #6D84A0;
+  --bronze: #A9772F;
+  --hairline: #DDD5C4;
+  --hairline-strong: #C7BCA4;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --measure: 40rem;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17140F;
+    --paper-raised: #201C15;
+    --ink: #ECE6D8;
+    --ink-quiet: #A79E8C;
+    --covenant: #8FAAD0;
+    --covenant-quiet: #6D84A0;
+    --bronze: #D3A15B;
+    --hairline: #35301F;
+    --hairline-strong: #453F2A;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17140F;
+  --paper-raised: #201C15;
+  --ink: #ECE6D8;
+  --ink-quiet: #A79E8C;
+  --covenant: #8FAAD0;
+  --covenant-quiet: #6D84A0;
+  --bronze: #D3A15B;
+  --hairline: #35301F;
+  --hairline-strong: #453F2A;
+}
+
+* { box-sizing: inherit; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--covenant); text-decoration-color: var(--hairline-strong); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+
+/* ---------- header / running head ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--hairline);
+  padding: 1.1rem 1.5rem;
+}
+.masthead-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.masthead-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.masthead-title:hover { color: var(--covenant); }
+nav.pages {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+}
+nav.pages a {
+  color: var(--ink-quiet);
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin-left: 1.25rem;
+  border-bottom: 1px solid transparent;
+}
+nav.pages a:first-child { margin-left: 0; }
+nav.pages a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+nav.pages a[aria-current="page"] {
+  color: var(--covenant);
+  border-color: var(--covenant-quiet);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3.2rem 1.5rem 1.5rem;
+}
+.hero-verse {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4.2vw, 2.55rem);
+  line-height: 1.22;
+  margin: 0 0 0.9rem;
+  max-width: 34rem;
+}
+.hero-ref {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--bronze);
+  margin: 0 0 1.6rem;
+}
+.hero-meta {
+  color: var(--ink-quiet);
+  font-size: 0.95rem;
+  max-width: var(--measure);
+}
+.status-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+}
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  color: var(--ink-quiet);
+  background: var(--paper-raised);
+}
+.pill.done { color: var(--covenant); border-color: var(--covenant-quiet); }
+.pill.current { color: var(--bronze); border-color: var(--bronze); }
+
+/* ---------- layout ---------- */
+
+.page-body {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 14rem minmax(0, var(--measure));
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 46rem) {
+  .page-body { grid-template-columns: 1fr; }
+}
+
+/* ---------- table of contents ---------- */
+
+.toc-wrap { position: sticky; top: 1.5rem; }
+@media (max-width: 46rem) { .toc-wrap { position: static; } }
+.toc-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-quiet);
+  margin: 0 0 0.6rem;
+}
+.toc-wrap nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--hairline);
+}
+.toc-wrap nav ul ul {
+  border-left: none;
+  padding-left: 0.9rem;
+}
+.toc-wrap nav li { margin: 0; }
+.toc-wrap nav a {
+  display: block;
+  padding: 0.28rem 0 0.28rem 0.85rem;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  font-size: 0.88rem;
+  color: var(--ink-quiet);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.toc-wrap nav a:hover { color: var(--ink); border-left-color: var(--hairline-strong); }
+details.toc-mobile { display: none; }
+@media (max-width: 46rem) {
+  .toc-wrap nav { display: none; }
+  details.toc-mobile {
+    display: block;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: var(--paper-raised);
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  details.toc-mobile summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--ink);
+  }
+  details.toc-mobile nav { display: block; margin-top: 0.6rem; }
+}
+
+/* ---------- article typography ---------- */
+
+article { min-width: 0; }
+article h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2.6rem 0 0.9rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+}
+article > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.18rem;
+  margin: 2.1rem 0 0.6rem;
+  color: var(--covenant);
+}
+article p { margin: 0 0 1rem; }
+article ul, article ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+article li { margin: 0.28rem 0; }
+article li > ul, article li > ol { margin-top: 0.28rem; }
+article strong { color: var(--ink); }
+article em { color: var(--ink); }
+article hr { border: none; border-top: 1px solid var(--hairline); margin: 2.4rem 0; }
+article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--paper-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+article blockquote {
+  margin: 1.2rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 2px solid var(--bronze);
+  color: var(--ink-quiet);
+  font-style: italic;
+}
+
+/* task lists */
+article ul.task-list, article .task-list-item { list-style: none; margin-left: -1.3rem; padding-left: 0; }
+article .task-list-item { display: flex; gap: 0.55rem; align-items: baseline; }
+article .task-list-item input[type="checkbox"] {
+  appearance: none;
+  width: 0.95em;
+  height: 0.95em;
+  border: 1.4px solid var(--hairline-strong);
+  border-radius: 3px;
+  margin-top: 0.32em;
+  flex: none;
+  position: relative;
+}
+article .task-list-item input[type="checkbox"]:checked {
+  background: var(--covenant);
+  border-color: var(--covenant);
+}
+article .task-list-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 2.5px; top: -1px;
+  width: 4px; height: 8px;
+  border: solid var(--paper);
+  border-width: 0 1.6px 1.6px 0;
+  transform: rotate(40deg);
+}
+
+/* tables */
+.table-scroll { overflow-x: auto; margin: 0 0 1.2rem; }
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.94rem;
+}
+article th, article td {
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+article th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-quiet);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+article tr:last-child td { border-bottom: none; }
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  max-width: 52rem;
+  margin: 3rem auto 0;
+  padding: 1.4rem 1.5rem 3rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-quiet);
+  font-size: 0.85rem;
+}
+
+/* ---------- diagram page ---------- */
+
+.diagram-card {
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  background: var(--paper-raised);
+  padding: 1.3rem 1rem;
+  margin: 1.5rem 0 2rem;
+}
+.diagram-card svg { display: block; width: 100%; height: auto; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  font-size: 0.86rem;
+  color: var(--ink-quiet);
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+.legend span.dot {
+  display: inline-block;
+  width: 0.6rem; height: 0.6rem;
+  border-radius: 50%;
+  background: var(--covenant);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="masthead-title" href="index.html">Si diereis oído a mi voz</a>
+    <nav class="pages" aria-label="Páginas del sitio"><a href="index.html">Plan del libro</a><a href="pendientes.html">Pendientes</a><a href="diagrama.html" aria-current="page">Diagrama</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-verse">Mis ovejas oyen mi voz, y yo las conozco, y me siguen.</p>
+  <p class="hero-ref">Juan 10:27, Reina&#8209;Valera 1960</p>
+  <p class="hero-meta">Diagrama &middot; los hilos temáticos del libro, de un vistazo.</p>
+  
+</div>
+
+<div class="page-body">
+<aside class="toc-wrap"></aside>
+  <article>
+
+    <h2>Mapa de hilos temáticos</h2>
+    <p>Una vista de conjunto de la estructura narrativa (opción A): las seis partes del libro, unidas por el hilo de <em>escuchar</em>, que las recorre todas. Debajo, cuatro hilos secundarios &mdash; la ley, el santuario, el sacerdocio y la imagen del esposo de Cantares &mdash; marcados donde son protagonistas.</p>
+    <div class="diagram-card">
+      <svg viewBox="0 0 760 320" role="img" aria-label="Mapa de hilos temáticos del libro" font-family="'Source Serif 4', Georgia, serif">
+  <defs>
+    <marker id="hilos-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="var(--hairline-strong)"/>
+    </marker>
+  </defs>
+  <text x="0" y="20" font-size="14" font-weight="600" fill="var(--ink)" font-family="'Fraunces', Georgia, serif">Las seis partes del libro, unidas por la voz que llama</text>
+
+  <g fill="none" stroke="var(--hairline-strong)" stroke-width="1.25">
+    <path d="M104 90H136" marker-end="url(#hilos-arrow)"/>
+    <path d="M226 90H258" marker-end="url(#hilos-arrow)"/>
+    <path d="M348 90H380" marker-end="url(#hilos-arrow)"/>
+    <path d="M470 90H502" marker-end="url(#hilos-arrow)"/>
+    <path d="M592 90H624" marker-end="url(#hilos-arrow)"/>
+  </g>
+
+  <g>
+    <rect x="14" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="59" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Intro</text>
+  </g>
+  <g>
+    <rect x="136" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="181" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Parte I</text>
+  </g>
+  <g>
+    <rect x="258" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="303" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Parte II</text>
+  </g>
+  <g>
+    <rect x="380" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="425" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Parte III</text>
+  </g>
+  <g>
+    <rect x="502" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="547" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Parte IV</text>
+  </g>
+  <g>
+    <rect x="624" y="70" width="90" height="40" rx="8" fill="none" stroke="var(--hairline-strong)" stroke-width="1.25"/>
+    <text x="669" y="94" text-anchor="middle" font-weight="600" fill="var(--ink)" font-size="12.5">Concl.</text>
+  </g>
+
+  <text x="369" y="132" text-anchor="middle" font-size="11.5" font-style="italic" fill="var(--ink-quiet)">Escuchar: el hilo central, recorre todo el libro</text>
+
+  <g>
+    <line x1="14" y1="170" x2="738" y2="170" stroke="var(--hairline)"/>
+    <text x="0" y="174" font-weight="600" fill="var(--ink)" font-size="12.5">Ley</text>
+    <circle cx="181" cy="170" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="303" cy="170" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="425" cy="170" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="547" cy="170" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+  </g>
+
+  <g>
+    <line x1="14" y1="210" x2="738" y2="210" stroke="var(--hairline)"/>
+    <text x="0" y="214" font-weight="600" fill="var(--ink)" font-size="12.5">Santuario</text>
+    <circle cx="303" cy="210" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="425" cy="210" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="669" cy="210" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+  </g>
+
+  <g>
+    <line x1="14" y1="250" x2="738" y2="250" stroke="var(--hairline)"/>
+    <text x="0" y="254" font-weight="600" fill="var(--ink)" font-size="12.5">Sacerdocio</text>
+    <circle cx="303" cy="250" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="425" cy="250" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="547" cy="250" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+  </g>
+
+  <g>
+    <line x1="14" y1="290" x2="738" y2="290" stroke="var(--hairline)"/>
+    <text x="0" y="294" font-weight="600" fill="var(--ink)" font-size="12.5">Esposo</text>
+    <circle cx="425" cy="290" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="547" cy="290" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+    <circle cx="669" cy="290" r="6" fill="var(--covenant)" fill-opacity="0.85"/>
+  </g>
+</svg>
+
+      <div class="legend">
+        <span><span class="dot"></span>El hilo es protagonista en esa parte del libro</span>
+      </div>
+    </div>
+    <p>Cada punto marca dónde el hilo es protagonista. Parte I: capítulos 1&ndash;2. Parte II: 3&ndash;7. Parte III: 8&ndash;9. Parte IV: 10&ndash;12. El hilo de escuchar recorre todo el libro, por eso no lleva fila propia.</p>
+    <p>El detalle capítulo por capítulo &mdash; qué versículo, qué cita, qué precisión doctrinal va en cada uno &mdash; sigue estando en el campo &laquo;Conexiones&raquo; de cada ficha, en el <a href="index.html">Plan del libro</a>.</p>
+
+  </article>
+</div>
+
+<footer class="site-footer">
+  Plan del libro · documento de trabajo del autor, generado con Claude. Última actualización: 25 de septiembre de 2026.
+</footer>
+</body>
+</html>
