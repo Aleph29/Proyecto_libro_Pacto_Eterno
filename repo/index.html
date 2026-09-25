@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan del libro · Si diereis oído a mi voz</title>
+<meta name="description" content="Plan de trabajo del libro sobre el pacto eterno, los dos pactos y el llamado a escuchar la voz de Dios.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128123;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>/* ---------------------------------------------------------------
+   Si diereis oído a mi voz — plan del libro
+   Paleta: papel (crema cálido), tinta (casi negro cálido),
+   índigo de pacto (acento primario), bronce (acento secundario).
+   Tipografía: Fraunces (títulos) + Source Serif 4 (cuerpo).
+   --------------------------------------------------------------- */
+
+:root {
+  --paper: #FAF7F0;
+  --paper-raised: #F3EEE1;
+  --ink: #241F18;
+  --ink-quiet: #6B6154;
+  --covenant: #2F4B6E;
+  --covenant-quiet: #6D84A0;
+  --bronze: #A9772F;
+  --hairline: #DDD5C4;
+  --hairline-strong: #C7BCA4;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --measure: 40rem;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17140F;
+    --paper-raised: #201C15;
+    --ink: #ECE6D8;
+    --ink-quiet: #A79E8C;
+    --covenant: #8FAAD0;
+    --covenant-quiet: #6D84A0;
+    --bronze: #D3A15B;
+    --hairline: #35301F;
+    --hairline-strong: #453F2A;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17140F;
+  --paper-raised: #201C15;
+  --ink: #ECE6D8;
+  --ink-quiet: #A79E8C;
+  --covenant: #8FAAD0;
+  --covenant-quiet: #6D84A0;
+  --bronze: #D3A15B;
+  --hairline: #35301F;
+  --hairline-strong: #453F2A;
+}
+
+* { box-sizing: inherit; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--covenant); text-decoration-color: var(--hairline-strong); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+
+/* ---------- header / running head ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--hairline);
+  padding: 1.1rem 1.5rem;
+}
+.masthead-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.masthead-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.masthead-title:hover { color: var(--covenant); }
+nav.pages {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+}
+nav.pages a {
+  color: var(--ink-quiet);
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin-left: 1.25rem;
+  border-bottom: 1px solid transparent;
+}
+nav.pages a:first-child { margin-left: 0; }
+nav.pages a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+nav.pages a[aria-current="page"] {
+  color: var(--covenant);
+  border-color: var(--covenant-quiet);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3.2rem 1.5rem 1.5rem;
+}
+.hero-verse {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4.2vw, 2.55rem);
+  line-height: 1.22;
+  margin: 0 0 0.9rem;
+  max-width: 34rem;
+}
+.hero-ref {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--bronze);
+  margin: 0 0 1.6rem;
+}
+.hero-meta {
+  color: var(--ink-quiet);
+  font-size: 0.95rem;
+  max-width: var(--measure);
+}
+.status-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+}
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  color: var(--ink-quiet);
+  background: var(--paper-raised);
+}
+.pill.done { color: var(--covenant); border-color: var(--covenant-quiet); }
+.pill.current { color: var(--bronze); border-color: var(--bronze); }
+
+/* ---------- layout ---------- */
+
+.page-body {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 14rem minmax(0, var(--measure));
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 46rem) {
+  .page-body { grid-template-columns: 1fr; }
+}
+
+/* ---------- table of contents ---------- */
+
+.toc-wrap { position: sticky; top: 1.5rem; }
+@media (max-width: 46rem) { .toc-wrap { position: static; } }
+.toc-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-quiet);
+  margin: 0 0 0.6rem;
+}
+.toc-wrap nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--hairline);
+}
+.toc-wrap nav ul ul {
+  border-left: none;
+  padding-left: 0.9rem;
+}
+.toc-wrap nav li { margin: 0; }
+.toc-wrap nav a {
+  display: block;
+  padding: 0.28rem 0 0.28rem 0.85rem;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  font-size: 0.88rem;
+  color: var(--ink-quiet);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.toc-wrap nav a:hover { color: var(--ink); border-left-color: var(--hairline-strong); }
+details.toc-mobile { display: none; }
+@media (max-width: 46rem) {
+  .toc-wrap nav { display: none; }
+  details.toc-mobile {
+    display: block;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: var(--paper-raised);
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  details.toc-mobile summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--ink);
+  }
+  details.toc-mobile nav { display: block; margin-top: 0.6rem; }
+}
+
+/* ---------- article typography ---------- */
+
+article { min-width: 0; }
+article h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2.6rem 0 0.9rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+}
+article > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.18rem;
+  margin: 2.1rem 0 0.6rem;
+  color: var(--covenant);
+}
+article p { margin: 0 0 1rem; }
+article ul, article ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+article li { margin: 0.28rem 0; }
+article li > ul, article li > ol { margin-top: 0.28rem; }
+article strong { color: var(--ink); }
+article em { color: var(--ink); }
+article hr { border: none; border-top: 1px solid var(--hairline); margin: 2.4rem 0; }
+article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--paper-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+article blockquote {
+  margin: 1.2rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 2px solid var(--bronze);
+  color: var(--ink-quiet);
+  font-style: italic;
+}
+
+/* task lists */
+article ul.task-list, article .task-list-item { list-style: none; margin-left: -1.3rem; padding-left: 0; }
+article .task-list-item { display: flex; gap: 0.55rem; align-items: baseline; }
+article .task-list-item input[type="checkbox"] {
+  appearance: none;
+  width: 0.95em;
+  height: 0.95em;
+  border: 1.4px solid var(--hairline-strong);
+  border-radius: 3px;
+  margin-top: 0.32em;
+  flex: none;
+  position: relative;
+}
+article .task-list-item input[type="checkbox"]:checked {
+  background: var(--covenant);
+  border-color: var(--covenant);
+}
+article .task-list-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 2.5px; top: -1px;
+  width: 4px; height: 8px;
+  border: solid var(--paper);
+  border-width: 0 1.6px 1.6px 0;
+  transform: rotate(40deg);
+}
+
+/* tables */
+.table-scroll { overflow-x: auto; margin: 0 0 1.2rem; }
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.94rem;
+}
+article th, article td {
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+article th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-quiet);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+article tr:last-child td { border-bottom: none; }
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  max-width: 52rem;
+  margin: 3rem auto 0;
+  padding: 1.4rem 1.5rem 3rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-quiet);
+  font-size: 0.85rem;
+}
+
+/* ---------- diagram page ---------- */
+
+.diagram-card {
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  background: var(--paper-raised);
+  padding: 1.3rem 1rem;
+  margin: 1.5rem 0 2rem;
+}
+.diagram-card svg { display: block; width: 100%; height: auto; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  font-size: 0.86rem;
+  color: var(--ink-quiet);
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+.legend span.dot {
+  display: inline-block;
+  width: 0.6rem; height: 0.6rem;
+  border-radius: 50%;
+  background: var(--covenant);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="masthead-title" href="index.html">Si diereis oído a mi voz</a>
+    <nav class="pages" aria-label="Páginas del sitio"><a href="index.html" aria-current="page">Plan del libro</a><a href="pendientes.html">Pendientes</a><a href="diagrama.html">Diagrama</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-verse">Si diereis oído a mi voz, y guardareis mi pacto, vosotros seréis mi especial tesoro sobre todos los pueblos.</p>
+  <p class="hero-ref">Éxodo 19:5, Reina&#8209;Valera 1960</p>
+  <p class="hero-meta">Plan del libro &middot; un proyecto en desarrollo sobre el pacto eterno y los dos pactos.</p>
+  <div class="status-row"><span class="pill done">Idea, alcances, estructura y fichas &mdash; aprobadas</span><span class="pill current">Tareas y plan de trabajo &mdash; en curso</span><span class="pill">Seguimiento &mdash; pendiente</span></div>
+</div>
+
+<div class="page-body">
+
+      <aside class="toc-wrap">
+        <details class="toc-mobile">
+          <summary>Índice</summary>
+          <nav aria-label="Índice de la página"><div class="toc">
+<ul>
+<li><a href="#estado-del-proyecto">Estado del proyecto</a></li>
+<li><a href="#idea-central">Idea central</a></li>
+<li><a href="#alcances">Alcances</a></li>
+<li><a href="#marco-teologico-y-convenciones">Marco teológico y convenciones</a></li>
+<li><a href="#estructura-aprobada-opcion-a">Estructura aprobada: opción A</a></li>
+<li><a href="#fichas-de-capitulo">Fichas de capítulo</a><ul>
+<li><a href="#introduccion-una-voz-que-no-escuchamos">Introducción · Una voz que no escuchamos</a></li>
+<li><a href="#capitulo-1-el-pacto-eterno-la-promesa-del-eden">Capítulo 1 · El pacto eterno: la promesa del Edén</a></li>
+<li><a href="#capitulo-2-dos-mujeres-dos-pactos-abraham-agar-y-sara">Capítulo 2 · Dos mujeres, dos pactos: Abraham, Agar y Sara</a></li>
+<li><a href="#capitulo-3-si-diereis-oido-a-mi-voz-la-oferta-del-pacto">Capítulo 3 · "Si diereis oído a mi voz": la oferta del pacto</a></li>
+<li><a href="#capitulo-4-haremos-el-pueblo-que-no-quiso-escuchar">Capítulo 4 · "Haremos": el pueblo que no quiso escuchar</a></li>
+<li><a href="#capitulo-5-ley-en-piedra-ley-en-el-corazon">Capítulo 5 · Ley en piedra, ley en el corazón</a></li>
+<li><a href="#capitulo-6-un-santuario-en-medio-de-ellos">Capítulo 6 · Un santuario en medio de ellos</a></li>
+<li><a href="#capitulo-7-de-reino-de-sacerdotes-a-sacerdocio-levitico">Capítulo 7 · De reino de sacerdotes a sacerdocio levítico</a></li>
+<li><a href="#capitulo-8-no-por-tu-pacto-los-profetas-anuncian-el-pacto-eterno">Capítulo 8 · "No por tu pacto": los profetas anuncian el pacto eterno</a></li>
+<li><a href="#capitulo-9-la-sangre-del-nuevo-pacto-cristo-mediador-y-sumo-sacerdote">Capítulo 9 · La sangre del nuevo pacto: Cristo, mediador y sumo sacerdote</a></li>
+<li><a href="#capitulo-10-quien-es-israel-el-pueblo-del-pacto">Capítulo 10 · ¿Quién es Israel? El pueblo del pacto</a></li>
+<li><a href="#capitulo-11-otras-maneras-de-leer-los-pactos-una-respuesta-fraternal">Capítulo 11 · Otras maneras de leer los pactos: una respuesta fraternal</a></li>
+<li><a href="#capitulo-12-si-oyereis-hoy-su-voz-vivir-en-el-nuevo-pacto">Capítulo 12 · "Si oyereis hoy su voz": vivir en el nuevo pacto</a></li>
+<li><a href="#conclusion-la-voz-que-sigue-llamando">Conclusión · La voz que sigue llamando</a></li>
+<li><a href="#apendice-waggoner-1888-y-el-mensaje-de-los-pactos">Apéndice · Waggoner, 1888 y el mensaje de los pactos</a></li>
+<li><a href="#revision-del-conjunto">Revisión del conjunto</a></li>
+</ul>
+</li>
+<li><a href="#registro-de-decisiones">Registro de decisiones</a></li>
+<li><a href="#plan-de-trabajo">Plan de trabajo</a><ul>
+<li><a href="#semana-actual">Semana actual</a></li>
+</ul>
+</li>
+</ul>
+</div></nav>
+        </details>
+        <p class="toc-label">Índice</p>
+        <nav aria-label="Índice de la página"><div class="toc">
+<ul>
+<li><a href="#estado-del-proyecto">Estado del proyecto</a></li>
+<li><a href="#idea-central">Idea central</a></li>
+<li><a href="#alcances">Alcances</a></li>
+<li><a href="#marco-teologico-y-convenciones">Marco teológico y convenciones</a></li>
+<li><a href="#estructura-aprobada-opcion-a">Estructura aprobada: opción A</a></li>
+<li><a href="#fichas-de-capitulo">Fichas de capítulo</a><ul>
+<li><a href="#introduccion-una-voz-que-no-escuchamos">Introducción · Una voz que no escuchamos</a></li>
+<li><a href="#capitulo-1-el-pacto-eterno-la-promesa-del-eden">Capítulo 1 · El pacto eterno: la promesa del Edén</a></li>
+<li><a href="#capitulo-2-dos-mujeres-dos-pactos-abraham-agar-y-sara">Capítulo 2 · Dos mujeres, dos pactos: Abraham, Agar y Sara</a></li>
+<li><a href="#capitulo-3-si-diereis-oido-a-mi-voz-la-oferta-del-pacto">Capítulo 3 · "Si diereis oído a mi voz": la oferta del pacto</a></li>
+<li><a href="#capitulo-4-haremos-el-pueblo-que-no-quiso-escuchar">Capítulo 4 · "Haremos": el pueblo que no quiso escuchar</a></li>
+<li><a href="#capitulo-5-ley-en-piedra-ley-en-el-corazon">Capítulo 5 · Ley en piedra, ley en el corazón</a></li>
+<li><a href="#capitulo-6-un-santuario-en-medio-de-ellos">Capítulo 6 · Un santuario en medio de ellos</a></li>
+<li><a href="#capitulo-7-de-reino-de-sacerdotes-a-sacerdocio-levitico">Capítulo 7 · De reino de sacerdotes a sacerdocio levítico</a></li>
+<li><a href="#capitulo-8-no-por-tu-pacto-los-profetas-anuncian-el-pacto-eterno">Capítulo 8 · "No por tu pacto": los profetas anuncian el pacto eterno</a></li>
+<li><a href="#capitulo-9-la-sangre-del-nuevo-pacto-cristo-mediador-y-sumo-sacerdote">Capítulo 9 · La sangre del nuevo pacto: Cristo, mediador y sumo sacerdote</a></li>
+<li><a href="#capitulo-10-quien-es-israel-el-pueblo-del-pacto">Capítulo 10 · ¿Quién es Israel? El pueblo del pacto</a></li>
+<li><a href="#capitulo-11-otras-maneras-de-leer-los-pactos-una-respuesta-fraternal">Capítulo 11 · Otras maneras de leer los pactos: una respuesta fraternal</a></li>
+<li><a href="#capitulo-12-si-oyereis-hoy-su-voz-vivir-en-el-nuevo-pacto">Capítulo 12 · "Si oyereis hoy su voz": vivir en el nuevo pacto</a></li>
+<li><a href="#conclusion-la-voz-que-sigue-llamando">Conclusión · La voz que sigue llamando</a></li>
+<li><a href="#apendice-waggoner-1888-y-el-mensaje-de-los-pactos">Apéndice · Waggoner, 1888 y el mensaje de los pactos</a></li>
+<li><a href="#revision-del-conjunto">Revisión del conjunto</a></li>
+</ul>
+</li>
+<li><a href="#registro-de-decisiones">Registro de decisiones</a></li>
+<li><a href="#plan-de-trabajo">Plan de trabajo</a><ul>
+<li><a href="#semana-actual">Semana actual</a></li>
+</ul>
+</li>
+</ul>
+</div></nav>
+      </aside>
+  <article>
+<h1 id="plan-del-libro-si-diereis-oido-a-mi-voz">Plan del libro: <em>Si diereis oído a mi voz</em></h1>
+<h2 id="estado-del-proyecto">Estado del proyecto</h2>
+<p>Fases 1 a 4 aprobadas: idea central, alcances, estructura y fichas de capítulo. Fase actual: 5, tareas y plan de trabajo. Plan de las primeras 4 semanas listo.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Idea central</td>
+<td>Aprobada</td>
+</tr>
+<tr>
+<td>2. Alcances</td>
+<td>Aprobada</td>
+</tr>
+<tr>
+<td>3. Estructura</td>
+<td>Aprobada</td>
+</tr>
+<tr>
+<td>4. Fichas de capítulo</td>
+<td>Aprobada</td>
+</tr>
+<tr>
+<td>5. Tareas y plan de trabajo</td>
+<td>En curso</td>
+</tr>
+<tr>
+<td>6. Seguimiento</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los asuntos que el autor resolverá después están en el documento aparte <em>Pendientes del libro</em>.</p>
+<h2 id="idea-central">Idea central</h2>
+<p><strong>Promesa del libro:</strong> Este libro ayuda a los líderes y maestros adventistas a descubrir que Dios siempre ha salvado de una sola manera, por gracia mediante la fe en el pacto eterno. Muestra que el antiguo pacto nació cuando el pueblo se negó a escuchar la voz de Dios, y que ese rechazo trajo una ley externa, un santuario terrenal y un sacerdocio levítico, que Cristo restaura en el nuevo pacto.</p>
+<p><strong>Tesis:</strong></p>
+<ul>
+<li>El antiguo y el nuevo pacto no son dos etapas sucesivas. Son dos caminos que coexisten desde el Génesis (Gál. 4:21-31).</li>
+<li>El antiguo pacto es la relación basada en las promesas y el esfuerzo humanos ("haremos", Éx. 19:8).</li>
+<li>El nuevo pacto, o pacto eterno, es la relación basada en la promesa de Dios, recibida por fe.</li>
+<li>Dios siempre ha salvado por medio del nuevo pacto.</li>
+</ul>
+<p><strong>Hilo conductor:</strong> el verbo <em>escuchar</em>. Escuchar la voz de Dios es la condición para entrar en su pacto (Éx. 19:5; Jer. 7:23; Rom. 10:17; Heb. 3:7-8).</p>
+<p><strong>Los tres cambios del Sinaí:</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Antiguo pacto</th>
+<th>Nuevo pacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ley</td>
+<td>Escrita en tablas de piedra, externa</td>
+<td>La misma ley escrita en el corazón por el Espíritu (2 Cor. 3:3-8; Jer. 31:33)</td>
+</tr>
+<tr>
+<td>Santuario</td>
+<td>Terrenal, en medio del pueblo (Éx. 25:8)</td>
+<td>Celestial; Dios mora en el corazón</td>
+</tr>
+<tr>
+<td>Sacerdocio</td>
+<td>Levítico, solo los hijos de Aarón</td>
+<td>Reino de sacerdotes; Cristo según el orden de Melquisedec (Éx. 19:6; Heb. 7; 1 Ped. 2:9)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Origen:</strong> el estudio personal del autor sobre <em>The Everlasting Covenant</em> de E. J. Waggoner y el respaldo de Elena G. de White a su enseñanza sobre los pactos en 1890.</p>
+<p><strong>Título:</strong> <em>Si diereis oído a mi voz</em> (Éx. 19:5, RVR1960).</p>
+<h2 id="alcances">Alcances</h2>
+<p>Un libro avanzado, de tono pastoral, de 200 a 280 páginas, para que líderes adventistas enseñen el pacto eterno.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lector principal</td>
+<td>Líderes, maestros de Escuela Sabática y ancianos adventistas</td>
+</tr>
+<tr>
+<td>Lector secundario</td>
+<td>Miembros que estudian a profundidad</td>
+</tr>
+<tr>
+<td>Nivel</td>
+<td>Avanzado: exégesis seria, términos hebreos y griegos cuando el argumento lo pida</td>
+</tr>
+<tr>
+<td>Tono</td>
+<td>Pastoral y cercano; fraternal, de "aclarar juntos", no de corregir a la iglesia</td>
+</tr>
+<tr>
+<td>Uso</td>
+<td>Estudio personal, estudio en grupo y evangelismo interno</td>
+</tr>
+<tr>
+<td>Extensión</td>
+<td>50,000–70,000 palabras; 10 a 12 capítulos de unas 5,000 palabras</td>
+</tr>
+<tr>
+<td>Publicación</td>
+<td>Autopublicación</td>
+</tr>
+<tr>
+<td>Material previo</td>
+<td>Ninguno; se empieza desde cero</td>
+</tr>
+<tr>
+<td>Fecha meta</td>
+<td>Sin fecha fija; se fijarán metas intermedias en la Fase 5</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Sí entra:</strong></p>
+<ol>
+<li>Escuchar como condición del pacto (Éx. 19:5; Deut. 6:4; Rom. 10:17; Heb. 3).</li>
+<li>Los dos pactos coexistiendo desde el Génesis: la promesa del Edén; Abraham, Agar y Sara (Gál. 4).</li>
+<li>El Sinaí: la negativa a escuchar y el "haremos", incluido Deut. 5:28-29.</li>
+<li>La ley y los pactos (2 Cor. 3; Jer. 31; Eze. 36).</li>
+<li>El santuario y los pactos.</li>
+<li>El sacerdocio y los pactos (Leví, Melquisedec, Heb. 7, 1 Ped. 2:9).</li>
+<li>Cristo, mediador y ratificación del nuevo pacto (Heb. –9).</li>
+<li>Vivir hoy en el nuevo pacto (Heb. 3–4: el reposo y escuchar su voz).</li>
+<li>Israel y la iglesia: quién es el pueblo del pacto hoy.</li>
+<li>Respuesta fraternal a otras posturas (dispensacionalismo, "pacto de obras" reformado), exponiéndolas con justicia.</li>
+<li>Waggoner y 1888: una historia breve en la introducción, respaldo donde corresponda y la historia detallada en un apéndice.</li>
+</ol>
+<p><strong>Queda fuera:</strong></p>
+<ul>
+<li>1844 y el juicio investigador como tema propio. Solo una mención breve del ministerio celestial de Cristo en el capítulo del santuario.</li>
+<li>Capítulos sobre los pactos con Noé y David. David puede aparecer como ejemplo (Sal. 51).</li>
+<li>La historia detallada de 1888 en el cuerpo del libro (va en el apéndice).</li>
+<li>Los debates sobre la naturaleza de Cristo.</li>
+<li>La perfección de la última generación.</li>
+</ul>
+<p><strong>Libros parecidos:</strong> <em>The Everlasting Covenant</em> (E. J. Waggoner, 1900); <em>In Granite or Ingrained?</em> (Skip MacCarty); <em>Our Creator Redeemer</em> (Hans K. LaRondelle). Ninguno fue escrito originalmente en español.</p>
+<p><strong>Lo que distingue a este libro:</strong> escrito en español para líderes latinoamericanos, con "escuchar" como eje y la tríada ley, santuario y sacerdocio para explicar los pactos.</p>
+<h2 id="marco-teologico-y-convenciones">Marco teológico y convenciones</h2>
+<p>El libro se centra en la Biblia. Elena G. de White y Waggoner son fuentes de respaldo, no el fundamento.</p>
+<p><strong>Respaldo principal verificado:</strong> en <em>Patriarcas y profetas</em>, capítulo «La ley y los pactos», Elena G. de White afirma que, si el pueblo hubiera guardado el pacto, no habría sido necesario proclamar la ley desde el Sinaí ni grabarla en tablas de piedra. Verificado en egwwritings.org.</p>
+<p><strong>Precisiones teológicas acordadas:</strong></p>
+<ul>
+<li><strong>La ley en el nuevo pacto:</strong> el Espíritu no sustituye al Decálogo; escribe esa misma ley en el corazón (Jer. 31:33; Eze. 36:27). Fórmula: "en el antiguo pacto la ley está afuera, en piedra, y solo puede condenar; en el nuevo, el Espíritu la escribe en el corazón".</li>
+<li><strong>La ley es santa y espiritual</strong> (Rom. 7:12, 14). Lo que carece del Espíritu es la relación del pueblo con ella: "la ley en tablas, sin el Espíritu en el corazón, es letra que mata".</li>
+<li><strong>El santuario:</strong> no presentarlo como un simple "plan alterno". El mismo santuario podía vivirse en cualquiera de los dos pactos: con obras confiando en el rito, o con fe mirando al Cordero (Sal. 51:16-19). Los sacrificios existían antes del Sinaí.</li>
+<li><strong>Hebreos 7:12:</strong> el "cambio de ley" se refiere a la ley del sacerdocio (Heb. 7:16), no al Decálogo.</li>
+<li><strong>Melquisedec:</strong> la relación entre el sacerdocio patriarcal y el orden de Melquisedec debe argumentarse paso a paso (Gén. 14:18-20; Sal. 110:4; Heb. 7).</li>
+<li><strong>"Pacto de obras":</strong> definirlo desde el inicio en el sentido de Waggoner (confiar en las propias promesas), distinto del uso reformado.</li>
+<li><strong>Objeciones que el libro debe responder:</strong> Deut. 5:28-29 ("bien está todo lo que han dicho") y la dimensión histórica de Hebreos (Luc. 22:20; Heb. 8:13; 9:15-18).</li>
+<li><strong>Waggoner:</strong> apoyarse en su enseñanza sobre los pactos, no en los dos capítulos añadidos en la edición de 1900, que contienen ideas panteístas.</li>
+</ul>
+<p><strong>Convenciones:</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Versión bíblica base</td>
+<td>Reina-Valera 1960</td>
+</tr>
+<tr>
+<td>Formato de citas</td>
+<td><em>Juan 3:16</em>; otra versión se indica entre paréntesis: <em>(NVI)</em></td>
+</tr>
+<tr>
+<td>Citas de Elena G. de White</td>
+<td>Solo verificadas en la fuente, con obra, capítulo y página de la edición usada</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="estructura-aprobada-opcion-a">Estructura aprobada: opción A</h2>
+<p>Recomendación: la opción A, narrativa, con un cuadro comparativo "antiguo pacto frente a nuevo pacto" al final de cada capítulo de la Parte II.</p>
+<p><strong>Decisión del autor:</strong> opción A aprobada, con una historia breve de Waggoner y 1888 en la introducción y los detalles en un apéndice.</p>
+<p><strong>Opción A · Narrativa: la historia de un pueblo que no quiso escuchar</strong></p>
+<ul>
+<li>Introducción: Una voz que no escuchamos (incluye una breve historia de Waggoner y 1888)</li>
+<li>Parte I · Antes del Sinaí
+  1. El pacto eterno: la promesa del Edén
+  2. Dos mujeres, dos pactos: Abraham, Agar y Sara</li>
+<li>Parte II · En el Sinaí
+  1. "Si diereis oído a mi voz": la oferta del pacto
+  2. "Haremos": el pueblo que no quiso escuchar
+  3. Ley en piedra, ley en el corazón
+  4. Un santuario en medio de ellos
+  5. De reino de sacerdotes a sacerdocio levítico</li>
+<li>Parte III · Los profetas y Cristo
+  1. "No por tu pacto": los profetas anuncian el pacto eterno
+  2. La sangre del nuevo pacto: Cristo, mediador y sumo sacerdote</li>
+<li>Parte IV · El pueblo del pacto hoy
+  1. ¿Quién es Israel? El pueblo del pacto
+  2. Otras maneras de leer los pactos: una respuesta fraternal
+  3. "Si oyereis hoy su voz": vivir en el nuevo pacto</li>
+<li>Conclusión</li>
+</ul>
+<p><strong>Apéndice:</strong> Waggoner, 1888 y el mensaje de los pactos. La historia detallada, el respaldo de Elena G. de White y las precauciones sobre la edición de 1900.</p>
+<p>Los capítulos se numeran del 1 al 12 de forma continua a lo largo de las cuatro partes.</p>
+<p><strong>Opción B (descartada) · Temática: la tríada ley, santuario y sacerdocio.</strong> Fundamentos (escuchar, los dos pactos, el Sinaí), un capítulo por elemento (ley, santuario, sacerdocio, mediador) y cierre (Israel y la iglesia, otras posturas, vivir hoy). Diez capítulos independientes, buenos para grupos; pierde la sensación de historia.</p>
+<p><strong>Opción C (descartada) · Preguntas: las dudas que escucha un líder.</strong> Cada capítulo responde una pregunta real. Es cercana, pero para un lector avanzado puede sentirse fragmentada.</p>
+<p><strong>Elementos de apoyo previstos:</strong> preguntas de estudio al final de cada capítulo, cuadros comparativos, glosario de términos e índice de citas bíblicas.</p>
+<h2 id="fichas-de-capitulo">Fichas de capítulo</h2>
+<p>Los cuatro bloques están aprobados: Fase 4 cerrada. Siguiente: Fase 5, tareas y plan de trabajo.</p>
+<p><em>Mapa de hilos temáticos:</em> cuatro hilos (escuchar, ley, santuario, sacerdocio, esposo) recorren las seis partes del libro: introducción, partes I a IV y conclusión. El hilo de escuchar recorre todo el libro, por eso no lleva fila propia. El detalle capítulo por capítulo sigue en el campo «Conexiones» de cada ficha, abajo. Ver la página <strong>Diagrama</strong> para la versión visual.</p>
+<p><strong>Hallazgo que une la Parte I:</strong> la expresión hebrea <em>shamá beqól</em> ("escuchar la voz") aparece en Gén. 3:17 (la caída), Gén. 16:2 (Abraham escucha a Sarai y nace Ismael) y Gén. 22:18; 26:5 (Abraham oye la voz de Dios). Verificar cada caso en un interlineal hebreo.</p>
+<h3 id="introduccion-una-voz-que-no-escuchamos">Introducción · Una voz que no escuchamos</h3>
+<p><em>Unas 3,500 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> que el lector descubra que quizá entiende los pactos como dos épocas, y quiera ver la alternativa.</li>
+<li><strong>Idea principal:</strong> Dios siempre ha salvado de una sola manera, y la clave está en un verbo: escuchar.</li>
+<li><strong>Subtemas:</strong>
+  1. Lo que aprendí en la iglesia: los pactos como dos épocas y la ley de Gálatas como solo ceremonial.
+  2. El encuentro con Waggoner: la serie de <em>Present Truth</em>, el "dolor de cabeza", el estudio y la oración.
+  3. No era una idea nueva: el mismo debate de 1888, la carta de Uriah Smith y el respaldo de Elena G. de White.
+  4. Lo que este libro no dice: que la ley fue abolida, o que no hay diferencia entre ley moral y ceremonial.
+  5. Definiciones: pacto; antiguo y nuevo pacto; "bajo la ley"; "pacto de obras" en el sentido de Waggoner.
+  6. Cómo leer este libro: con la Biblia abierta, como los de Berea (Hech. 17:11), y en grupo.</li>
+<li><strong>Pasajes clave:</strong> Éx. 19:5; Heb. 13:20; Gál. 4:24; Hech. 17:11.</li>
+<li><strong>Fuentes:</strong> carta de Elena G. de White a Uriah Smith, 8 de marzo de 1890; carta de Uriah Smith a Elena G. de White, 17 de febrero de 1890; <em>Mensajes selectos</em>, t. 1, caps. 30 y 31 («La ley en Gálatas», subtítulo «Especialmente la ley moral»).</li>
+<li><strong>Elementos:</strong> cuadro "Lo que este libro no dice".</li>
+<li><strong>Precisión:</strong> el Decálogo no cambió; cambió dónde está escrito y cómo nos relacionamos con él. El testimonio del autor se cuenta como tal, pero el argumento descansa en la Escritura.</li>
+</ul>
+<h3 id="capitulo-1-el-pacto-eterno-la-promesa-del-eden">Capítulo 1 · El pacto eterno: la promesa del Edén</h3>
+<p><em>Unas 4,500 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> que el lector vea que el pacto de gracia existía antes del pecado, y que desde la primera familia hubo dos maneras de acercarse a Dios.</li>
+<li><strong>Idea principal:</strong> el pacto eterno nació en el corazón de Dios antes de la creación y se anunció en el Edén.</li>
+<li><strong>Subtemas:</strong>
+  1. Un pacto antes de la fundación del mundo.
+  2. La caída como escuchar la voz equivocada (Gén. 3:8-10, 17).
+  3. La primera promesa: la simiente de la mujer y las pieles (Gén. 3:15, 21).
+  4. Caín y Abel: el propio esfuerzo frente a la fe (Gén. 4; Heb. 11:4).
+  5. La ley conocida antes del Sinaí.</li>
+<li><strong>Pasajes clave:</strong> Efe. 1:4; 2 Tim. 1:9; Tito 1:2; 1 Ped. 1:19-20; Apoc. 13:8; Gén. 3–4; Heb. 11:4; 13:20.</li>
+<li><strong>Fuentes:</strong> <em>Patriarcas y profetas</em>, «La ley y los pactos» (ley dada a Adán tras la caída, preservada por Noé, observada por Abraham; verificado); capítulos sobre el plan de redención y sobre Caín y Abel (por verificar).</li>
+<li><strong>Conexiones:</strong> la división entre dos maneras de acercarse a Dios reaparece en la casa de Abraham.</li>
+<li><strong>Elementos:</strong> línea de tiempo "El pacto eterno, del Edén al Apocalipsis".</li>
+<li><strong>Precisión:</strong> presentar a Caín como primer ejemplo del principio, no como alguien "del antiguo pacto" de forma anacrónica.</li>
+</ul>
+<p><strong>Agregado · la ley y el sábado desde la creación:</strong> Gén. 2:1-3; 2:17 (el primer mandamiento, antes del pecado); 4:7; Mar. 2:27; Rom. 5:13-14 (explicar que, si la muerte reinó de Adán a Moisés, había una ley transgredida; Rom. 4:15).</p>
+<h3 id="capitulo-2-dos-mujeres-dos-pactos-abraham-agar-y-sara">Capítulo 2 · Dos mujeres, dos pactos: Abraham, Agar y Sara</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> demostrar con Gálatas 4 que ambos pactos coexistían siglos antes del Sinaí.</li>
+<li><strong>Idea principal:</strong> Ismael nació de escuchar la voz humana y del esfuerzo propio; Isaac, de la promesa recibida por fe.</li>
+<li><strong>Subtemas:</strong>
+  1. La promesa a Abraham (Gén. 12:1-3).
+  2. "Creyó a Jehová, y le fue contado por justicia" (Gén. 15:6; Rom. 4:1-5).
+  3. Agar: Abraham escuchó la voz de Sarai (Gén. 16:2).
+  4. Isaac, el hijo de la promesa, y la señal del pacto (Gén. 17; 21).
+  5. "Estas mujeres son los dos pactos" (Gál. 4:21-31).
+  6. La ley no anula la promesa (Gál. 3:17, 21).</li>
+<li><strong>Pasajes clave:</strong> Gén. 12; 15; 16; 17; 21; 22:18; 26:5; Rom. 4; Gál. 3:6-18, 29; 4:21-31; Heb. 11:8-19.</li>
+<li><strong>Fuentes:</strong> capítulos de <em>Patriarcas y profetas</em> sobre Abraham (por verificar); primeros capítulos de Waggoner sobre la promesa a Abraham, según la serie de <em>Present Truth</em>.</li>
+<li><strong>Conexiones:</strong> deja abierta la pregunta de la Parte II: si el pacto de la promesa ya existía, ¿qué pasó en el Sinaí?</li>
+<li><strong>Elementos:</strong> cuadro "Agar y Sara": voz escuchada, método, hijo, resultado, pacto.</li>
+<li><strong>Precisión:</strong> Gál. 3:17 no opone la ley a la promesa (Gál. 3:21).</li>
+</ul>
+<p><strong>Agregado · los patriarcas conocían los mandamientos:</strong> Gén. 26:5 ("mis mandamientos, mis estatutos y mis leyes"); 35:2; 39:9.</p>
+<p><strong>Hilo "escuchar y obedecer" (Parte II en adelante):</strong> en hebreo, <em>shamá</em> significa escuchar y obedecer; en griego, <em>hypakouō</em> (obedecer) viene de <em>akouō</em> (oír); en español, "obedecer" viene del latín <em>oboedire</em>, de <em>audire</em> (oír). La obediencia nace del escuchar, y Dios la produce en el pacto eterno (Heb. 13:20-21; Fil. 2:13; Eze. 36:27).</p>
+<h3 id="capitulo-3-si-diereis-oido-a-mi-voz-la-oferta-del-pacto">Capítulo 3 · "Si diereis oído a mi voz": la oferta del pacto</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> que el lector vea que en el Sinaí Dios ofreció el mismo pacto eterno, cuya única condición era escuchar.</li>
+<li><strong>Idea principal:</strong> el pacto del Sinaí empieza con la gracia: primero Dios rescata (Éx. 19:4) y después pide que escuchen.</li>
+<li><strong>Subtemas:</strong>
+  1. Rescatados antes de recibir la ley (Éx. 19:4; 20:2).
+  2. "Mi pacto": el pacto con Abraham ya vigente (Éx. 2:24; 6:4-5).
+  3. "Si diereis oído a mi voz": escuchar y obedecer son la misma palabra (<em>shamá</em>, <em>hypakouō</em>, <em>oboedire</em>); Gén. 26:5; Juan 10:27; Rom. 10:16-17.
+  4. "Guardareis mi pacto": guardar como atesorar, no como producir.
+  5. Las promesas: especial tesoro, reino de sacerdotes, gente santa (Éx. 19:5-6). Se desarrolla en el capítulo 7.</li>
+<li><strong>Pasajes clave:</strong> Éx. 2:24; 6:2-8; 19:1-6; 20:2; Deut. 7:6-9; Gén. 26:5; Juan 10:27; Rom. 1:5; 10:16-17; 1 Ped. 2:9.</li>
+<li><strong>Fuentes:</strong> capítulo de <em>Patriarcas y profetas</em> sobre la ley dada a Israel (por verificar).</li>
+<li><strong>Elementos:</strong> cuadro "Éxodo 19:4-6, frase por frase".</li>
+<li><strong>Precisión:</strong> Dios no ofreció un pacto defectuoso; el defecto vino de la respuesta del pueblo (Heb. 8:8).</li>
+</ul>
+<p><strong>Agregado · subtema nuevo, los mandamientos y el sábado antes del Sinaí:</strong></p>
+<ul>
+<li>Faraón: "¿Quién es Jehová, para que yo oiga su voz?" (Éx. 5:2) y "les hacéis cesar de sus tareas" (Éx. 5:5, raíz hebrea <em>shabat</em>). <em>Patriarcas y profetas</em> (verificado en egwwritings.org, PP54 262.5): Moisés enseñó que obedecer a Dios era la primera condición para la liberación, y los esfuerzos por restaurar el sábado llegaron a oídos de los opresores.</li>
+<li>El maná: el sábado guardado antes del Sinaí y "¿Hasta cuándo no querréis guardar mis mandamientos y mis leyes?" (Éx. 16:22-30).</li>
+</ul>
+<h3 id="capitulo-4-haremos-el-pueblo-que-no-quiso-escuchar">Capítulo 4 · "Haremos": el pueblo que no quiso escuchar</h3>
+<p><em>Unas 5,500 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que el antiguo pacto nace de la autosuficiencia y el miedo humanos, no de una decisión de Dios.</li>
+<li><strong>Idea principal:</strong> Israel respondió "haremos" cuando Dios le pedía "escuchad", y después pidió no volver a oír su voz.</li>
+<li><strong>Subtemas:</strong>
+  1. "Todo lo que Jehová ha dicho, haremos" (Éx. 19:8; 24:3, 7).
+  2. <em>Na'asé venishmá</em> ("haremos y escucharemos", Éx. 24:7): el hacer antes del escuchar; querer producir lo que solo Dios produce. Mencionar con respeto la lectura judía positiva (Talmud, <em>Shabat</em> 88a).
+  3. "No hable Dios con nosotros" (Éx. 20:18-21).
+  4. La objeción: "bien está todo lo que han dicho" y "¡Quién diera que tuviesen tal corazón!" (Deut. 5:23-29); el profeta como Moisés (Deut. 18:15-19).
+  5. El becerro de oro: la promesa rota (Éx. 32).
+  6. "Mirad que no desechéis al que habla" (Heb. 12:18-25).
+  7. Semilla: la amada de Cantares que no estaba lista para abrir.</li>
+<li><strong>Pasajes clave:</strong> Éx. 19:7-25; 20:18-21; 24:3-8; 32; Deut. 5:23-29; 18:15-19; Heb. 12:18-25; 1 Cor. 10:11.</li>
+<li><strong>Fuentes:</strong> <em>Patriarcas y profetas</em>, «La ley y los pactos» (verificado en egwwritings.org, PP 341.4; p. 388 en la edición de Publicaciones Interamericanas según fuentes secundarias): el pueblo no percibía su pecaminosidad ni comprendía que "sin Cristo les era imposible guardar la ley de Dios"; los términos del antiguo pacto eran "obedece y vivirás" y el nuevo se basa en "mejores promesas". Capítulo sobre la idolatría en el Sinaí (por verificar).</li>
+<li><strong>Elementos:</strong> cuadro "Lo que Dios pidió y lo que el pueblo respondió".</li>
+<li><strong>Precisiones:</strong> no presentar a Israel como peor que nosotros (1 Cor. 10:11). Decir "quisieron producir por sí mismos lo que solo Dios puede producir", no "hacer las obras que solo a Dios le corresponden" (Efe. 2:10; Gál. 2:20).</li>
+</ul>
+<h3 id="capitulo-5-ley-en-piedra-ley-en-el-corazon">Capítulo 5 · Ley en piedra, ley en el corazón</h3>
+<p><em>Unas 6,000 palabras (el más denso).</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que la misma ley puede estar en la piedra, donde condena, o en el corazón, donde da vida; "bajo la ley" describe una relación.</li>
+<li><strong>Idea principal:</strong> no cambió la ley, sino dónde está escrita y cómo nos relacionamos con ella.</li>
+<li><strong>Subtemas:</strong>
+  1. Escrita por el dedo de Dios: la ley no es el problema (Éx. 31:18; 32:15-16; Rom. 7:12, 14).
+  2. ¿Por qué en piedra? Si hubieran guardado el pacto, no habría hecho falta grabarla en tablas (Elena G. de White, verificado).
+  3. Letra y Espíritu (2 Cor. 3:3-8).
+  4. La misma ley en el corazón (Jer. 31:33; Eze. 36:26-27; Heb. 8:10; Rom. 8:2-4).
+  5. El Espíritu "por el oír con fe" (Gál. 3:2, 5); Dios produce "el querer como el hacer" (Fil. 2:12-13).
+  6. "Bajo la ley" y "bajo la gracia" (Gál. 3:23-25; 5:18; Rom. 6:14) y el debate de 1888 (<em>Mensajes selectos</em>, t. 1, cap. 31).
+  7. Ley moral y ceremonial: una distinción que se mantiene (Deut. 10:1-5; 31:24-26).</li>
+<li><strong>Fuentes:</strong> <em>Patriarcas y profetas</em>, «La ley y los pactos»: la misma ley grabada en piedra es escrita por el Espíritu Santo en el corazón (localizada en fuente secundaria; confirmar).</li>
+<li><strong>Elementos:</strong> cuadro "La ley en los dos pactos".</li>
+<li><strong>Precisiones:</strong> el Espíritu no sustituye al Decálogo, lo escribe en el corazón (Creencia 19). Escuchar no es pasividad: nuestra parte es escuchar, rendir la voluntad y cooperar (Fil. 2:12).</li>
+</ul>
+<p><strong>Agregado · de la voz a la piedra:</strong> antes del Sinaí la ley se transmitía por la voz de Dios y se vivía escuchando (Gén. 26:5); como el pueblo no quiso escuchar, quedó escrita en piedra; el Espíritu la vuelve a escribir en el corazón.</p>
+<ul>
+<li>"Acuérdate" (Éx. 20:8) como señal de preexistencia, siempre unido a Éx. 20:11 y a Éx. 16. Advertir que Deut. 5:12 dice "guardarás".</li>
+<li>La ley de la libertad: 2 Cor. 3:17; Sant. 1:25; 2:12; Sal. 119:45; 1 Tim. 1:9 ("la ley no fue dada para el justo").</li>
+<li>Para el corazón que escucha, el "no harás" se vuelve promesa. No oponer lo negativo a lo positivo: el primer mandamiento fue una prohibición (Gén. 2:17).</li>
+<li>Elena G. de White: los Diez Mandamientos como "diez promesas" (<em>Mensajes selectos</em>, t. 1, por verificar).</li>
+</ul>
+<h3 id="capitulo-6-un-santuario-en-medio-de-ellos">Capítulo 6 · Un santuario en medio de ellos</h3>
+<p><em>Unas 5,500 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que el santuario revelaba el evangelio y podía vivirse desde el antiguo pacto (confiar en el rito) o desde el nuevo (mirar al Cordero).</li>
+<li><strong>Idea principal:</strong> Dios pidió un santuario para habitar en medio de su pueblo, pero su deseo siempre fue habitar en el corazón.</li>
+<li><strong>Subtemas:</strong>
+  1. "Habitaré en medio de ellos" (Éx. 25:8) y la morada en el corazón (Juan 14:23; 2 Cor. 6:16; Efe. 3:17).
+  2. Los sacrificios antes del Sinaí (sistema confiado a Adán, Elena G. de White, verificado).
+  3. "Escuchad mi voz" antes que los holocaustos (Jer. 7:21-23); "el obedecer [<em>shemóa</em>] es mejor que los sacrificios" (1 Sam. 15:22).
+  4. El mismo rito en dos pactos: ritualismo o fe (Sal. 51:16-19; Isa. 1:11-17; Miq. 6:6-8). Tras el becerro de oro, el pueblo se unió a Dios por la fe en el Salvador simbolizado en los sacrificios (<em>Patriarcas y profetas</em>, verificado).
+  5. Sombra del santuario celestial (Éx. 25:9, 40; Heb. 8:5; 9:9-10, 23-24).
+  6. Breve: Cristo ministra hoy en el santuario celestial, sin desarrollar 1844.</li>
+<li><strong>Fuentes:</strong> capítulo de <em>Patriarcas y profetas</em> sobre el tabernáculo y sus servicios (por verificar).</li>
+<li><strong>Elementos:</strong> cuadro "El santuario en los dos pactos".</li>
+<li><strong>Precisiones:</strong> nada de "plan alterno": es el Dios que se acerca al pueblo que no quiso acercarse. Si se usa Gál. 3:19, advertir que los intérpretes adventistas difieren sobre a qué ley se refiere.</li>
+</ul>
+<h3 id="capitulo-7-de-reino-de-sacerdotes-a-sacerdocio-levitico">Capítulo 7 · De reino de sacerdotes a sacerdocio levítico</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que el sacerdocio levítico reemplazó uno más amplio, y que Cristo lo restaura.</li>
+<li><strong>Idea principal:</strong> Dios ofreció que todos fueran sacerdotes; tras el rechazo se limitó a una tribu, y en Cristo vuelve a ser de todos.</li>
+<li><strong>Subtemas:</strong>
+  1. El sacerdocio de los padres de familia (Gén. 8:20; 12:7; Job 1:5) y los sacerdotes previos a Aarón (Éx. 19:22-24).
+  2. Melquisedec (Gén. 14:18-20; Sal. 110:4), con el argumento construido paso a paso.
+  3. El becerro de oro y Leví (Éx. 32:26-29); los levitas en lugar de los primogénitos (Núm. 3:12-13; 8:16-18).
+  4. "Mudado el sacerdocio, necesario es que haya también cambio de ley" (Heb. 7:11-16).
+  5. Restaurado en Cristo (1 Ped. 2:5, 9; Apoc. 1:6; 5:10).</li>
+<li><strong>Elementos:</strong> cuadro "El sacerdocio en los dos pactos".</li>
+<li><strong>Precisiones:</strong> Heb. 7:12 se refiere a la ley del sacerdocio (Heb. 7:16), no al Decálogo. La identificación del sacerdocio familiar con el orden de Melquisedec es interpretación del autor: presentarla como tal.</li>
+</ul>
+<h3 id="capitulo-8-no-por-tu-pacto-los-profetas-anuncian-el-pacto-eterno">Capítulo 8 · "No por tu pacto": los profetas anuncian el pacto eterno</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que los profetas diagnosticaron el mismo problema del Sinaí, no escuchar, y anunciaron como remedio el pacto eterno con un corazón nuevo.</li>
+<li><strong>Idea principal:</strong> los profetas fueron la voz de Dios en la puerta de un pueblo que no quería oír; su promesa fue siempre "mi pacto", no "tu pacto".</li>
+<li><strong>Subtemas:</strong>
+  1. La voz que no escucharon (Jer. 7:13, 24-28; 11:1-8; 2 Crón. 36:15-16).
+  2. Corazones de piedra: "pusieron su corazón como diamante, para no oír la ley" (Zac. 7:11-12).
+  3. "Oíd, y vivirá vuestra alma; y haré con vosotros pacto eterno" (Isa. 55:1-3).
+  4. El nuevo pacto prometido (Jer. 31:31-34).
+  5. Corazón de carne (Eze. 11:19-20; 36:26-27).
+  6. "No por tu pacto": el pacto de la juventud hecho sempiterno (Eze. 16:59-63).
+  7. El Dios esposo: "te desposaré conmigo para siempre" (Os. 2:18-20).</li>
+<li><strong>Pasajes clave:</strong> Isa. 55:1-7; Jer. 7:13, 21-28; 11:1-8; 31:31-34; Eze. 11:19-20; 16:59-63; 36:26-27; Os. 2:18-20; 6:7; Zac. 7:11-12; 2 Crón. 36:15-16.</li>
+<li><strong>Fuentes:</strong> <em>Profetas y reyes</em>, capítulos sobre Jeremías y la restauración (por verificar).</li>
+<li><strong>Conexiones:</strong> Os. 6:7 con el capítulo 1; Zac. 7:12 con el capítulo 5; Os. 2 con el capítulo 12.</li>
+<li><strong>Elementos:</strong> cuadro "Lo que dijeron los profetas": profeta, diagnóstico, promesa.</li>
+<li><strong>Precisiones:</strong> Jer. 31:32 se refiere al pacto del Sinaí tal como el pueblo lo recibió y lo invalidó ("ellos invalidaron"), no a un error de Dios. En Os. 6:7 hay dos lecturas ("como Adán" y "en Adán", lugar): mencionarlas.</li>
+</ul>
+<h3 id="capitulo-9-la-sangre-del-nuevo-pacto-cristo-mediador-y-sumo-sacerdote">Capítulo 9 · La sangre del nuevo pacto: Cristo, mediador y sumo sacerdote</h3>
+<p><em>Unas 6,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> responder por qué el pacto eterno se llama "nuevo", y presentar a Cristo como quien cumplió el pacto desde dentro de la humanidad.</li>
+<li><strong>Idea principal:</strong> el pacto eterno siempre estuvo vigente como promesa y en la cruz fue ratificado con la sangre de Cristo. Es "nuevo" porque ahí se sella lo prometido desde el Edén.</li>
+<li><strong>Subtemas:</strong>
+  1. Cristo, el que sí escuchó (Juan 5:30; 8:28-29; 12:49; Isa. 50:4-5; Sal. 40:6-8 con Heb. 10:5-7; Heb. 5:8).
+  2. "Esta copa es el nuevo pacto en mi sangre" (Luc. 22:20; Mat. 26:28): la ratificación.
+  3. Hebreos 8: mejor mediador, mejores promesas; "reprendiéndolos" (8:8). Respuesta a 8:13: desaparece el sistema del Sinaí y la relación del antiguo pacto, no el pacto eterno.
+  4. "Para la remisión de las transgresiones que había bajo el primer pacto" (Heb. 9:15; Rom. 3:25-26; Heb. 11:39-40): la cruz redime también a los creyentes del Antiguo Testamento.
+  5. Sumo sacerdote según el orden de Melquisedec (Heb. 7:24-25; 8:1-2).
+  6. "Habitó entre nosotros" (Juan 1:14; <em>skēnoō</em>, "puso su tienda"): el santuario hecho carne.
+  7. La sangre que habla mejor que la de Abel (Heb. 12:24).</li>
+<li><strong>Pasajes clave:</strong> Juan 1:14; 5:30; 8:28-29; Isa. 50:4-5; Sal. 40:6-8; Luc. 22:20; Mat. 26:28; Heb. 5:8; 7:24-25; 8:1-13; 9:11-18; 10:5-7; 12:24; Rom. 3:25-26.</li>
+<li><strong>Fuentes:</strong> <em>Patriarcas y profetas</em>, «La ley y los pactos»: el pacto llamado "nuevo" por ser ratificado con la sangre de Cristo (por verificar). <em>El Deseado de todas las gentes</em>, capítulo sobre la última cena (por verificar).</li>
+<li><strong>Elementos:</strong> cuadro "Promesa y ratificación".</li>
+<li><strong>Precisiones:</strong> afirmar y explicar la dimensión histórica: la cruz es ratificación, no inicio. No decir que los creyentes del Antiguo Testamento se salvaban "sin Cristo": se salvaban por la fe en el Cristo prometido.</li>
+</ul>
+<h3 id="capitulo-10-quien-es-israel-el-pueblo-del-pacto">Capítulo 10 · ¿Quién es Israel? El pueblo del pacto</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> mostrar que el pueblo del pacto siempre se ha definido por escuchar y creer, no por la descendencia física.</li>
+<li><strong>Idea principal:</strong> "no todos los que descienden de Israel son israelitas" (Rom. 9:6); los hijos de la promesa son los que escuchan.</li>
+<li><strong>Subtemas:</strong>
+  1. Los hijos de la promesa (Rom. 9:6-8; Gál. 3:7, 29), en enlace con Agar y Sara.
+  2. La circuncisión del corazón (Deut. 30:6; Rom. 2:28-29).
+  3. El olivo: Dios no ha desechado a su pueblo; remanente por gracia; gentiles injertados (Rom. 11:1-5, 17-24).
+  4. Un solo pueblo (Efe. 2:11-22); "oirán mi voz; y habrá un rebaño" (Juan 10:16).
+  5. El reino de sacerdotes restaurado en la iglesia (1 Ped. 2:9-10).
+  6. El remanente: "los mandamientos de Dios y la fe de Jesús" (Apoc. 12:17; 14:12); "Salid de ella, pueblo mío" (Apoc. 18:4).</li>
+<li><strong>Pasajes clave:</strong> Rom. 2:28-29; 9:6-8; 11:1-24; Gál. 3:7, 29; Efe. 2:11-22; Juan 10:16; 1 Ped. 2:9-10; Deut. 30:6; Jer. 18:7-10; Apoc. 12:17; 14:6-12; 18:4.</li>
+<li><strong>Fuentes:</strong> <em>Palabras de vida del gran Maestro</em>, capítulo sobre la viña del Señor; <em>Profetas y reyes</em>, sobre la misión de Israel (por verificar).</li>
+<li><strong>Elementos:</strong> cuadro "El pueblo del pacto a lo largo de la Biblia".</li>
+<li><strong>Precisiones:</strong> respeto al pueblo judío (Rom. 11:18-20). El remanente sin orgullo: se define por escuchar, no por sentirse superior. Las profecías sobre Israel son condicionales (Jer. 18:7-10).</li>
+</ul>
+<h3 id="capitulo-11-otras-maneras-de-leer-los-pactos-una-respuesta-fraternal">Capítulo 11 · Otras maneras de leer los pactos: una respuesta fraternal</h3>
+<p><em>Unas 5,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> que el líder conozca las principales lecturas de los pactos, en qué coinciden con este libro y en qué difieren.</li>
+<li><strong>Idea principal:</strong> exponer cada postura como la expondrían sus mejores defensores antes de responderla.</li>
+<li><strong>Subtemas</strong> (cada postura: qué enseña, en qué coincidimos, en qué diferimos y por qué):
+  1. La lectura popular de "dos épocas", también presente en el adventismo.
+  2. El dispensacionalismo.
+  3. La teología reformada del pacto: coincide en un solo pacto de gracia; difiere en el "pacto de obras" y en el sábado.
+  4. La teología del nuevo pacto y el pactualismo progresivo.
+  5. Dentro del adventismo: la sucesión histórica (línea de Uriah Smith) frente a la lectura de Waggoner.</li>
+<li><strong>Fuentes (por verificar ediciones en español):</strong> Charles Ryrie, <em>Dispensacionalismo hoy</em>; Biblia anotada de Scofield; Confesión de fe de Westminster, cap. 7; Louis Berkhof, <em>Teología sistemática</em>; Peter Gentry y Stephen Wellum, <em>Kingdom through Covenant</em>.</li>
+<li><strong>Elementos:</strong> cuadro comparativo de las cinco posturas.</li>
+<li><strong>Precisiones:</strong> citar a cada postura con sus propias fuentes; reconocer lo que tiene de verdad; tratar con especial cuidado a los adventistas que piensan distinto; mantener el capítulo proporcionado.</li>
+</ul>
+<h3 id="capitulo-12-si-oyereis-hoy-su-voz-vivir-en-el-nuevo-pacto">Capítulo 12 · "Si oyereis hoy su voz": vivir en el nuevo pacto</h3>
+<p><em>Unas 6,000 palabras.</em></p>
+<ul>
+<li><strong>Propósito:</strong> llevar todo el libro a la vida del lector: escuchar a Dios hoy y dejar que él produzca la obediencia.</li>
+<li><strong>Idea principal:</strong> el pacto eterno sigue tocando a la puerta con su voz; si hoy oímos, él entra y hace su obra en nosotros.</li>
+<li><strong>Subtemas:</strong>
+  1. "Si oyereis hoy su voz, no endurezcáis vuestros corazones" (Heb. 3:7-8; 4:7).
+  2. El reposo de las propias obras: el sábado como señal del nuevo pacto (Heb. 4:9-10; Eze. 20:12; Éx. 31:13). Cierra el recorrido del sábado en el libro.
+  3. Cómo se escucha hoy: "Habla, porque tu siervo oye" (1 Sam. 3:10); la Palabra, la oración, el Espíritu (Juan 10:27; 16:13).
+  4. La obediencia como fruto: Sant. 1:22 y Mat. 7:24; el oidor que no hace no escuchó en el sentido de <em>shamá</em>.
+  5. Laodicea y la voz en la puerta: Cant. 5:2-6; Isa. 55:6-7; Apoc. 3:14-22; <em>La luz del mundo</em> de William Holman Hunt (1851–1854); las dos citas de Elena G. de White de la carpeta del autor (el Testigo fiel y el zarandeo; el mensaje de Jones y Waggoner como mensaje a Laodicea).
+  6. El reencuentro: "Yo soy de mi amado, y mi amado es mío" (Cant. 6:3).</li>
+<li><strong>Elementos:</strong> preguntas de estudio más personales, para la reflexión y el compromiso.</li>
+<li><strong>Precisiones:</strong></li>
+<li>La cita es Apoc. 3:20; "llamo" traduce <em>krouō</em>, "tocar a la puerta": Jesús sí toca, y la puerta se abre al oír la voz.</li>
+<li>Cant. 5:2 es <em>qol dodí dofeq</em>, "la voz de mi amado, que toca"; la Septuaginta usa <em>krouō</em>.</li>
+<li>La anécdota de la manija olvidada de Hunt no está confirmada: "se cuenta que…".</li>
+<li>No alegorizar a los guardias de Cant. 5:7.</li>
+<li>No terminar en el miedo: la motivación del nuevo pacto es la voz del Amado.</li>
+<li>El sábado como descanso en la obra de Dios, no como una obra más.</li>
+</ul>
+<h3 id="conclusion-la-voz-que-sigue-llamando">Conclusión · La voz que sigue llamando</h3>
+<p><em>Unas 2,500 palabras.</em></p>
+<ul>
+<li><strong>Recorrido:</strong> la voz que busca en el Edén ("¿Dónde estás tú?", Gén. 3:9), la del Sinaí, la de los profetas, la de Cristo en la puerta y la última invitación: "el que oye, diga: Ven" (Apoc. 22:17).</li>
+<li><strong>El círculo se cierra:</strong> "He aquí el tabernáculo de Dios con los hombres" (Apoc. 21:3).</li>
+<li><strong>Bendición final:</strong> Heb. 13:20-21: por la sangre del pacto eterno, Dios obra "en vosotros lo que es agradable delante de él".</li>
+</ul>
+<h3 id="apendice-waggoner-1888-y-el-mensaje-de-los-pactos">Apéndice · Waggoner, 1888 y el mensaje de los pactos</h3>
+<p><em>Unas 4,000 palabras.</em></p>
+<ol>
+<li>Quiénes fueron E. J. Waggoner y A. T. Jones.</li>
+<li>Mineápolis 1888: el mensaje de la justicia por la fe y la resistencia de Butler y Smith.</li>
+<li>La controversia sobre los pactos (1890): las cartas de Elena G. de White a Uriah Smith; la reconciliación de Smith en 1891.</li>
+<li>El respaldo de Elena G. de White: <em>Testimonios para los ministros</em>, p. 91; carta S24 de 1892.</li>
+<li>Los últimos años de Waggoner y las precauciones sobre la edición de 1900 (biografía de Whidden).</li>
+<li>Para seguir estudiando: <em>1888 Materials</em>, George Knight, Woodrow Whidden, la serie de <em>Present Truth</em>.</li>
+</ol>
+<p><strong>Materiales finales:</strong> glosario de términos, índice de citas bíblicas y bibliografía.</p>
+<h3 id="revision-del-conjunto">Revisión del conjunto</h3>
+<p>Todos los temas de la ficha de alcances tienen su capítulo y nada de lo excluido se coló. Los hilos (escuchar, ley, santuario, sacerdocio, esposo) recorren el libro y se cierran en la Parte IV.</p>
+<p><strong>Extensión:</strong> la suma de las fichas da unas 74,000 palabras (unas 290 páginas), por encima de las 50,000–70,000 acordadas. No se recorta todavía; se ajusta al revisar el primer borrador.</p>
+<h2 id="registro-de-decisiones">Registro de decisiones</h2>
+<p>Todas las decisiones se tomaron el 25 de septiembre de 2026.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Decisión</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Libro de no ficción religiosa, desde la teología adventista</td>
+<td>Tema y tradición del autor</td>
+</tr>
+<tr>
+<td>Lector: líderes y maestros adventistas</td>
+<td>Evangelismo interno: cada líder multiplica el mensaje</td>
+</tr>
+<tr>
+<td>Escrito para miembros, pero comprensible para quien viene de fuera</td>
+<td>Permite usarlo también en evangelismo</td>
+</tr>
+<tr>
+<td>Propósito: enseñar la doctrina con claridad</td>
+<td>Aclarar conceptos dentro del adventismo actual</td>
+</tr>
+<tr>
+<td>Libro centrado en la Biblia; Waggoner es una fuente entre otras</td>
+<td>El lector juzga el mensaje por la Biblia, no por la historia de su autor</td>
+</tr>
+<tr>
+<td>Hilo conductor: escuchar a Dios</td>
+<td>Condición para entrar en el pacto (Éx. 19:5)</td>
+</tr>
+<tr>
+<td>Incluir la ley y el sacerdocio junto al santuario</td>
+<td>Forman la tríada de cambios del Sinaí</td>
+</tr>
+<tr>
+<td>Nivel avanzado, tono pastoral</td>
+<td>Rigor para líderes, cercanía para hermanos</td>
+</tr>
+<tr>
+<td>Extensión media: 200–280 páginas</td>
+<td>Espacio para 10–12 capítulos con exégesis</td>
+</tr>
+<tr>
+<td>Incluir Israel y la iglesia y otras posturas</td>
+<td>Preguntas que los líderes reciben</td>
+</tr>
+<tr>
+<td>Excluir 1844 como tema propio y los pactos con Noé y David</td>
+<td>Mantener el foco en la tesis</td>
+</tr>
+<tr>
+<td>Tono fraternal ante quienes piensan distinto</td>
+<td>La relación entre los pactos no está definida en las 28 Creencias</td>
+</tr>
+<tr>
+<td>Autopublicación</td>
+<td>Decisión del autor</td>
+</tr>
+<tr>
+<td>Versión base: Reina-Valera 1960</td>
+<td>La más usada por los lectores</td>
+</tr>
+<tr>
+<td>Sin fecha fija; metas intermedias en la Fase 5</td>
+<td>Decisión del autor</td>
+</tr>
+<tr>
+<td>Título: Si diereis oído a mi voz</td>
+<td>Toma el texto de Éx. 19:5, eje del libro</td>
+</tr>
+<tr>
+<td>Estructura: opción A, narrativa</td>
+<td>La tesis es una historia: Dios habla, el pueblo no escucha</td>
+</tr>
+<tr>
+<td>Waggoner y 1888: breve en la introducción, detalle en un apéndice</td>
+<td>Da contexto sin desviar el cuerpo del libro</td>
+</tr>
+<tr>
+<td>Fuente de Waggoner: la serie de Present Truth, no la edición de 1900</td>
+<td>Evita los capítulos añadidos con ideas panteístas</td>
+</tr>
+<tr>
+<td>Se mantiene la distinción entre ley moral y ceremonial</td>
+<td>La sostienen la Creencia 19 y Elena G. de White; el libro enfatiza la relación con la ley</td>
+</tr>
+<tr>
+<td>Cantares 5, Apocalipsis 3:20 y la pintura de Hunt van en el capítulo 12, con una semilla en el 4</td>
+<td>Cierra el libro como un círculo: la voz en el Sinaí y la voz en la puerta</td>
+</tr>
+<tr>
+<td>El hilo "escuchar y obedecer" se reparte en los capítulos 3, 4, 5, 9, 12 y la conclusión</td>
+<td>Responde a la objeción "¿y la obediencia?" y crece de capítulo en capítulo</td>
+</tr>
+<tr>
+<td>Historias e ilustraciones de la Parte II se agregarán sobre la marcha</td>
+<td>Decisión del autor</td>
+</tr>
+<tr>
+<td>La ley y el sábado antes del Sinaí se reparten en los capítulos 1, 2, 3, 5 y 12</td>
+<td>Muestra la progresión: de la voz a la piedra y de la piedra al corazón</td>
+</tr>
+<tr>
+<td>Fase 4 cerrada con 12 capítulos, conclusión y apéndice</td>
+<td>Fichas aprobadas por bloques</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="plan-de-trabajo">Plan de trabajo</h2>
+<p>Fase 5. Tiempo disponible: 4–6 horas por semana. Dificultad principal: terminar lo que se empieza. Fecha meta: sin fecha fija.</p>
+<p><strong>Orden de escritura:</strong> en orden, del capítulo 1 al 12, por la estructura narrativa y acumulativa. No se abre un capítulo nuevo hasta cerrar el anterior.</p>
+<p><strong>Estimado de horas (desde cero, libro doctrinal de \~74,000 palabras):</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Actividad</th>
+<th>Horas estimadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Investigar y verificar</td>
+<td>\~150</td>
+</tr>
+<tr>
+<td>Escribir el primer borrador (≈400 palabras/hora)</td>
+<td>\~185</td>
+</tr>
+<tr>
+<td>Revisar el contenido completo</td>
+<td>\~90</td>
+</tr>
+<tr>
+<td><strong>Total hasta el segundo borrador</strong></td>
+<td><strong>\~425</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>A 5 horas por semana, \~85 semanas (poco más de un año y medio) hasta el segundo borrador, antes de la revisión externa y la producción. Se recalculará con el ritmo real del autor tras las primeras semanas.</p>
+<p><strong>Hitos:</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" checked disabled> Plan del libro aprobado — 25 de septiembre de 2026</li>
+<li class="task-list-item"><input type="checkbox" disabled> Investigación base completa</li>
+<li class="task-list-item"><input type="checkbox" disabled> Primer borrador completo</li>
+<li class="task-list-item"><input type="checkbox" disabled> Segunda versión (revisión de contenido de todo el libro)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Revisión externa</li>
+<li class="task-list-item"><input type="checkbox" disabled> Versión final corregida</li>
+<li class="task-list-item"><input type="checkbox" disabled> Materiales complementarios y producción</li>
+</ul>
+<p><strong>Ciclo por capítulo</strong> (no se avanza al siguiente paso sin cerrar el anterior):</p>
+<ol>
+<li>Reunir: releer la ficha del capítulo.</li>
+<li>Investigar: una tarea por cada fuente marcada 📖, hasta dejarla ✔️.</li>
+<li>Esbozar: una tarea, el esquema con los subtemas en orden.</li>
+<li>Escribir: una tarea por subtema (600–1,200 palabras cada una), no por capítulo completo.</li>
+<li>Cerrar: unir las piezas, agregar transiciones y el cuadro comparativo.</li>
+<li>Revisar contenido: ¿cumple el propósito de la ficha?</li>
+<li>Pasar por la skill de teólogo.</li>
+<li>Pasar por la skill de editor.</li>
+</ol>
+<p>Al final de cada sesión, anotar en una línea qué sigue.</p>
+<h3 id="semana-actual">Semana actual</h3>
+<p><strong>Semana 1 · Meta: cerrar la investigación de la Introducción</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar la carta a Uriah Smith del 8 de marzo de 1890 en <em>1888 Materials</em> (1 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar el sermón del mismo día, manuscrito 4 de 1890 (1 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar <em>Mensajes selectos</em>, t. 1, caps. 30 y 31 (1.5 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Comparar la traducción de libros1888.com con el original en <em>Present Truth</em> (1.5 h)</li>
+</ul>
+<p><strong>Semana 2 · Meta: escribir el borrador de la Introducción</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir subtemas 1 y 2: lo aprendido en la iglesia; el encuentro con Waggoner (2 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir subtemas 3 y 4: no era una idea nueva; lo que este libro no dice (2 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir subtemas 5 y 6 y cerrar la Introducción (1 h)</li>
+</ul>
+<p><strong>Semana 3 · Meta: cerrar la Introducción y empezar el capítulo 1</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Revisar la Introducción con la skill de teólogo (1 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Revisar la Introducción con la skill de editor (1 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar en <em>Patriarcas y profetas</em> los capítulos sobre el plan de redención y Caín y Abel (1.5 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Esbozar el capítulo 1 (30 min)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir el subtema 1 del capítulo 1 (1 h)</li>
+</ul>
+<p><strong>Semana 4 · Meta: continuar el capítulo 1</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir los subtemas 2 y 3 del capítulo 1 (2 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Escribir los subtemas 4 y 5 del capítulo 1 (2 h)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Cerrar el capítulo 1: transiciones y cuadro comparativo (1 h)</li>
+</ul>
+<p>Al terminar la semana 4, se calibra el ritmo real de escritura y se planean las siguientes semanas.</p>
+  </article>
+</div>
+
+<footer class="site-footer">
+  Plan del libro · documento de trabajo del autor, generado con Claude. Última actualización: 25 de septiembre de 2026.
+</footer>
+</body>
+</html>

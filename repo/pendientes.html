@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pendientes · Si diereis oído a mi voz</title>
+<meta name="description" content="Lista de pendientes del libro: derechos, autopublicación, revisión doctrinal y verificación de fuentes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128123;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>/* ---------------------------------------------------------------
+   Si diereis oído a mi voz — plan del libro
+   Paleta: papel (crema cálido), tinta (casi negro cálido),
+   índigo de pacto (acento primario), bronce (acento secundario).
+   Tipografía: Fraunces (títulos) + Source Serif 4 (cuerpo).
+   --------------------------------------------------------------- */
+
+:root {
+  --paper: #FAF7F0;
+  --paper-raised: #F3EEE1;
+  --ink: #241F18;
+  --ink-quiet: #6B6154;
+  --covenant: #2F4B6E;
+  --covenant-quiet: #6D84A0;
+  --bronze: #A9772F;
+  --hairline: #DDD5C4;
+  --hairline-strong: #C7BCA4;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --measure: 40rem;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17140F;
+    --paper-raised: #201C15;
+    --ink: #ECE6D8;
+    --ink-quiet: #A79E8C;
+    --covenant: #8FAAD0;
+    --covenant-quiet: #6D84A0;
+    --bronze: #D3A15B;
+    --hairline: #35301F;
+    --hairline-strong: #453F2A;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17140F;
+  --paper-raised: #201C15;
+  --ink: #ECE6D8;
+  --ink-quiet: #A79E8C;
+  --covenant: #8FAAD0;
+  --covenant-quiet: #6D84A0;
+  --bronze: #D3A15B;
+  --hairline: #35301F;
+  --hairline-strong: #453F2A;
+}
+
+* { box-sizing: inherit; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--covenant); text-decoration-color: var(--hairline-strong); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+
+/* ---------- header / running head ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--hairline);
+  padding: 1.1rem 1.5rem;
+}
+.masthead-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.masthead-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.masthead-title:hover { color: var(--covenant); }
+nav.pages {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+}
+nav.pages a {
+  color: var(--ink-quiet);
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin-left: 1.25rem;
+  border-bottom: 1px solid transparent;
+}
+nav.pages a:first-child { margin-left: 0; }
+nav.pages a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+nav.pages a[aria-current="page"] {
+  color: var(--covenant);
+  border-color: var(--covenant-quiet);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3.2rem 1.5rem 1.5rem;
+}
+.hero-verse {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4.2vw, 2.55rem);
+  line-height: 1.22;
+  margin: 0 0 0.9rem;
+  max-width: 34rem;
+}
+.hero-ref {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--bronze);
+  margin: 0 0 1.6rem;
+}
+.hero-meta {
+  color: var(--ink-quiet);
+  font-size: 0.95rem;
+  max-width: var(--measure);
+}
+.status-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+}
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  color: var(--ink-quiet);
+  background: var(--paper-raised);
+}
+.pill.done { color: var(--covenant); border-color: var(--covenant-quiet); }
+.pill.current { color: var(--bronze); border-color: var(--bronze); }
+
+/* ---------- layout ---------- */
+
+.page-body {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 14rem minmax(0, var(--measure));
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 46rem) {
+  .page-body { grid-template-columns: 1fr; }
+}
+
+/* ---------- table of contents ---------- */
+
+.toc-wrap { position: sticky; top: 1.5rem; }
+@media (max-width: 46rem) { .toc-wrap { position: static; } }
+.toc-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-quiet);
+  margin: 0 0 0.6rem;
+}
+.toc-wrap nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--hairline);
+}
+.toc-wrap nav ul ul {
+  border-left: none;
+  padding-left: 0.9rem;
+}
+.toc-wrap nav li { margin: 0; }
+.toc-wrap nav a {
+  display: block;
+  padding: 0.28rem 0 0.28rem 0.85rem;
+  margin-left: -1px;
+  border-left: 1px solid transparent;
+  font-size: 0.88rem;
+  color: var(--ink-quiet);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.toc-wrap nav a:hover { color: var(--ink); border-left-color: var(--hairline-strong); }
+details.toc-mobile { display: none; }
+@media (max-width: 46rem) {
+  .toc-wrap nav { display: none; }
+  details.toc-mobile {
+    display: block;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: var(--paper-raised);
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  details.toc-mobile summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--ink);
+  }
+  details.toc-mobile nav { display: block; margin-top: 0.6rem; }
+}
+
+/* ---------- article typography ---------- */
+
+article { min-width: 0; }
+article h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2.6rem 0 0.9rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+}
+article > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.18rem;
+  margin: 2.1rem 0 0.6rem;
+  color: var(--covenant);
+}
+article p { margin: 0 0 1rem; }
+article ul, article ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+article li { margin: 0.28rem 0; }
+article li > ul, article li > ol { margin-top: 0.28rem; }
+article strong { color: var(--ink); }
+article em { color: var(--ink); }
+article hr { border: none; border-top: 1px solid var(--hairline); margin: 2.4rem 0; }
+article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--paper-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+article blockquote {
+  margin: 1.2rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 2px solid var(--bronze);
+  color: var(--ink-quiet);
+  font-style: italic;
+}
+
+/* task lists */
+article ul.task-list, article .task-list-item { list-style: none; margin-left: -1.3rem; padding-left: 0; }
+article .task-list-item { display: flex; gap: 0.55rem; align-items: baseline; }
+article .task-list-item input[type="checkbox"] {
+  appearance: none;
+  width: 0.95em;
+  height: 0.95em;
+  border: 1.4px solid var(--hairline-strong);
+  border-radius: 3px;
+  margin-top: 0.32em;
+  flex: none;
+  position: relative;
+}
+article .task-list-item input[type="checkbox"]:checked {
+  background: var(--covenant);
+  border-color: var(--covenant);
+}
+article .task-list-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 2.5px; top: -1px;
+  width: 4px; height: 8px;
+  border: solid var(--paper);
+  border-width: 0 1.6px 1.6px 0;
+  transform: rotate(40deg);
+}
+
+/* tables */
+.table-scroll { overflow-x: auto; margin: 0 0 1.2rem; }
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.94rem;
+}
+article th, article td {
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+article th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-quiet);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+article tr:last-child td { border-bottom: none; }
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  max-width: 52rem;
+  margin: 3rem auto 0;
+  padding: 1.4rem 1.5rem 3rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-quiet);
+  font-size: 0.85rem;
+}
+
+/* ---------- diagram page ---------- */
+
+.diagram-card {
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  background: var(--paper-raised);
+  padding: 1.3rem 1rem;
+  margin: 1.5rem 0 2rem;
+}
+.diagram-card svg { display: block; width: 100%; height: auto; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  font-size: 0.86rem;
+  color: var(--ink-quiet);
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+.legend span.dot {
+  display: inline-block;
+  width: 0.6rem; height: 0.6rem;
+  border-radius: 50%;
+  background: var(--covenant);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="masthead-title" href="index.html">Si diereis oído a mi voz</a>
+    <nav class="pages" aria-label="Páginas del sitio"><a href="index.html">Plan del libro</a><a href="pendientes.html" aria-current="page">Pendientes</a><a href="diagrama.html">Diagrama</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-verse">Buscad a Jehová mientras puede ser hallado.</p>
+  <p class="hero-ref">Isaías 55:6, Reina&#8209;Valera 1960</p>
+  <p class="hero-meta">Pendientes del libro &middot; decisiones, permisos y verificaciones que el autor resolverá más adelante.</p>
+  
+</div>
+
+<div class="page-body">
+
+      <aside class="toc-wrap">
+        <details class="toc-mobile">
+          <summary>Índice</summary>
+          <nav aria-label="Índice de la página"><div class="toc">
+<ul>
+<li><a href="#decisiones-del-libro-aun-abiertas">Decisiones del libro aún abiertas</a></li>
+<li><a href="#derechos-y-permisos">Derechos y permisos</a></li>
+<li><a href="#autopublicacion">Autopublicación</a></li>
+<li><a href="#revision-doctrinal-externa">Revisión doctrinal externa</a></li>
+<li><a href="#verificaciones-de-fuentes">Verificaciones de fuentes</a></li>
+</ul>
+</div></nav>
+        </details>
+        <p class="toc-label">Índice</p>
+        <nav aria-label="Índice de la página"><div class="toc">
+<ul>
+<li><a href="#decisiones-del-libro-aun-abiertas">Decisiones del libro aún abiertas</a></li>
+<li><a href="#derechos-y-permisos">Derechos y permisos</a></li>
+<li><a href="#autopublicacion">Autopublicación</a></li>
+<li><a href="#revision-doctrinal-externa">Revisión doctrinal externa</a></li>
+<li><a href="#verificaciones-de-fuentes">Verificaciones de fuentes</a></li>
+</ul>
+</div></nav>
+      </aside>
+  <article>
+<h1 id="pendientes-del-libro">Pendientes del libro</h1>
+<h2 id="decisiones-del-libro-aun-abiertas">Decisiones del libro aún abiertas</h2>
+<p>Dos decisiones de contenido faltan antes de pasar a las fichas de capítulo.</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" checked disabled> Elegir la estructura (resuelto: opción A): opción A (narrativa, recomendada), B (temática) o C (preguntas). Detalle en el <em>Plan del libro</em>.</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Elegir el título definitivo. Opciones: <em>Si oyereis mi voz</em>, <em>Escuchar a Dios</em>, <em>Dos pactos, una salvación</em>. Resuelto: Si diereis oído a mi voz.</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Decidir si la historia de Waggoner y 1888 va solo en la introducción o también en un apéndice. Resuelto: breve en la introducción y detallada en un apéndice.</li>
+</ul>
+<h2 id="derechos-y-permisos">Derechos y permisos</h2>
+<p>Al autopublicar, el autor es responsable de los permisos de todo lo que cite. Esto no es asesoría legal; ante dudas, conviene consultar a un especialista en derechos de autor.</p>
+<p><strong>Reina-Valera 1960:</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Leer el aviso de derechos vigente de la RVR1960 (Sociedades Bíblicas Unidas) en las primeras páginas de una Biblia reciente o en el sitio de la Sociedad Bíblica de México.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Anotar cuántos versículos permite citar sin permiso escrito y con qué condiciones.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Al terminar el manuscrito, contar los versículos citados y comprobar que no pasen del límite.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Si se pasan, solicitar permiso por escrito a la Sociedad Bíblica.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Redactar la nota de derechos de la RVR1960 para la página legal del libro.</li>
+</ul>
+<p><strong>Elena G. de White:</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Consultar con el Ellen G. White Estate (o su oficina en la División Interamericana) las condiciones para citar sus escritos y las traducciones al español.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Registrar qué edición en español se usa para las páginas de <em>Patriarcas y profetas</em> y las demás obras.</li>
+</ul>
+<p><strong>Otras obras:</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Si se cita a Waggoner, MacCarty, LaRondelle u otros autores en citas extensas, revisar si requieren permiso. Las obras de Waggoner de 1900 probablemente sean de dominio público, pero conviene confirmarlo.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Revisar los derechos de cualquier traducción al español de obras en inglés que se cite.</li>
+</ul>
+<h2 id="autopublicacion">Autopublicación</h2>
+<p>Estas decisiones pueden esperar hasta que el primer borrador esté avanzado, pero conviene investigarlas con tiempo.</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Decidir el formato: impreso, libro electrónico o ambos.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Decidir la plataforma o el canal: impresión bajo demanda, imprenta local, distribución en librerías adventistas o venta directa.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Investigar el trámite del ISBN en México ante INDAUTOR: requisitos, costo y tiempos.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Investigar el registro de la obra ante INDAUTOR para proteger los derechos del autor.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Definir quién hará la corrección de estilo final (además de la skill de editor).</li>
+<li class="task-list-item"><input type="checkbox" disabled> Definir quién hará el diseño de portada y la maquetación del interior.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Preparar la página legal: derechos, ISBN, nota de la RVR1960, edición y año.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Estimar el presupuesto total: corrección, diseño, ISBN, impresión y distribución.</li>
+</ul>
+<h2 id="revision-doctrinal-externa">Revisión doctrinal externa</h2>
+<p>Sin comité editorial, una revisión externa da credibilidad al libro ante los líderes que lo leerán.</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Identificar a un pastor o teólogo de la Asociación o Unión que pueda leer el manuscrito.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Identificar a uno o dos lectores de confianza (maestros o ancianos) que representen al lector ideal.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Decidir en qué momento se comparte: por capítulos o con el primer borrador completo.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Enviar primero los capítulos más delicados: el santuario, el sacerdocio y la ley.</li>
+</ul>
+<h2 id="verificaciones-de-fuentes">Verificaciones de fuentes</h2>
+<p>Referencias mencionadas en la planeación que hay que confirmar en la fuente original antes de usarlas en el libro.</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Confirmar en <em>The Ellen G. White 1888 Materials</em> la carta de Elena G. de White a Uriah Smith del 8 de marzo de 1890 (carta 59, 1890) sobre la postura de Waggoner acerca de los pactos. Solo se verificó en fuentes secundarias.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Confirmar el sermón del mismo día (manuscrito 4, 1890; <em>1888 Materials</em>, p. 596) y buscar si existe traducción oficial al español.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Anotar la página exacta, en la edición usada, del capítulo «La ley y los pactos» de <em>Patriarcas y profetas</em>. El texto ya se verificó en egwwritings.org.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Identificar cuáles son los dos capítulos añadidos a <em>The Everlasting Covenant</em> en 1900 que no estaban en la serie de <em>Present Truth</em>, para no apoyarse en ellos. Fuente: el prólogo histórico de Ron Duffield.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Consultar la biografía de Woodrow Whidden sobre Waggoner para conocer sus desviaciones posteriores.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar ediciones en español (si existen) de MacCarty y LaRondelle.</li>
+</ul>
+<p><strong>Agregadas en la Fase 4:</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Comparar la traducción de libros1888.com con el original en inglés de la serie de <em>Present Truth</em> antes de citar a Waggoner.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar el texto y las páginas de <em>Mensajes selectos</em>, t. 1, caps. 30 («La ley y el evangelio») y 31 («La ley en Gálatas»). Los títulos ya se verificaron.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar la carta de Uriah Smith a Elena G. de White del 17 de febrero de 1890 (citada en fuentes secundarias).</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar en un interlineal hebreo la expresión <em>shamá beqól</em> en Gén. 3:17; 16:2; 22:18; 26:5 y Éx. 19:5.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar <em>qol dodí dofeq</em> en Cant. 5:2 y el uso de <em>krouō</em> en la Septuaginta y en Apoc. 3:20.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Investigar si Elena G. de White relacionó el mensaje de 1888 con el mensaje a Laodicea.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar los capítulos de <em>Patriarcas y profetas</em> sobre el plan de redención, Caín y Abel, y Abraham (títulos y páginas).</li>
+<li class="task-list-item"><input type="checkbox" disabled> Si se usa la imagen de <em>La luz del mundo</em> de Holman Hunt en el libro, confirmar que la fotografía elegida sea de uso libre.</li>
+</ul>
+<p><strong>Citas de Elena G. de White guardadas en la carpeta física (Laodicea y 1888):</strong></p>
+<p>Para el capítulo 12 y el apéndice. Buscarlas en la carpeta, anotar la referencia exacta y confirmarlas en egwwritings.org.</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>El testimonio del Testigo fiel a Laodicea trae el zarandeo.</strong> Localización probable: <em>Primeros escritos</em>, capítulo «El zarandeo» (p. 270 en inglés, <em>Early Writings</em>), y <em>Testimonios para la iglesia</em>, t. 1 (p. 181 en inglés). Por confirmar la página en la edición en español.</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong>El mensaje de Jones y Waggoner es el mensaje de Dios a Laodicea.</strong> Localizada en fuentes secundarias: carta S24 de 1892 ("The message given us by A. T. Jones and E. J. Waggoner is the message of God to the Laodicean church"). Por confirmar en <em>The Ellen G. White 1888 Materials</em> y buscar si existe traducción oficial al español.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Comparar las hojas impresas de la carpeta con estas referencias, por si son citas distintas.</li>
+</ul>
+<p><strong>Agregadas con el bloque 2 (Parte II):</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Anotar la página, en la edición de <em>Patriarcas y profetas</em> que tiene el autor, del párrafo sobre "sin Cristo les era imposible guardar la ley de Dios" (egwwritings.org: PP 341.4; otras fuentes: p. 388 de Publicaciones Interamericanas). Registrar esa edición como la de referencia del libro.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Confirmar en egwwritings.org la declaración de que la misma ley grabada en piedra es escrita por el Espíritu Santo en el corazón (mismo capítulo; hoy solo localizada en fuente secundaria).</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar en <em>El camino a Cristo</em>, capítulo sobre la consagración, el pasaje sobre entregar la voluntad a Dios.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Buscar en <em>Palabras de vida del gran Maestro</em> la frase en el sentido de que todas las órdenes de Dios son capacitaciones.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar <em>na'asé venishmá</em> en Éx. 24:7 y la referencia del Talmud (<em>Shabat</em> 88a), para mencionarla con precisión.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar <em>shemóa</em> en 1 Sam. 15:22 y <em>hypakouō</em> / <em>akoē</em> en Rom. 10:16-17 y Gál. 3:2, 5.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar los capítulos de <em>Patriarcas y profetas</em> sobre la ley dada a Israel, la idolatría en el Sinaí y el tabernáculo y sus servicios.</li>
+</ul>
+<p><strong>Agregadas con el bloque 3 (Parte III):</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar en <em>Patriarcas y profetas</em>, «La ley y los pactos», la redacción exacta sobre el pacto llamado "nuevo" por haber sido ratificado con la sangre de Cristo.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar en <em>El Deseado de todas las gentes</em> el capítulo sobre la última cena y lo que dice del nuevo pacto.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar en <em>Profetas y reyes</em> los capítulos sobre Jeremías y la esperanza de restauración.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Revisar las dos lecturas de Os. 6:7 ("como Adán" y "en Adán") en comentarios, incluido el <em>Comentario bíblico adventista</em>.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar <em>skēnoō</em> en Juan 1:14.</li>
+</ul>
+<p><strong>Agregadas con el bloque 4 (Parte IV, conclusión y apéndice):</strong></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> Buscar en <em>Mensajes selectos</em>, t. 1, la declaración de que los Diez Mandamientos ("harás" y "no harás") son diez promesas.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Anotar la página, en la edición del autor, del pasaje de <em>Patriarcas y profetas</em> sobre Faraón y la restauración del sábado (egwwritings.org: PP54 262.5; ya verificado).</li>
+<li class="task-list-item"><input type="checkbox" disabled> Verificar la raíz <em>shabat</em> en Éx. 5:5.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar en <em>Palabras de vida del gran Maestro</em> el capítulo sobre la viña del Señor y en <em>Profetas y reyes</em> lo relativo a la misión de Israel.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Conseguir las fuentes de otras posturas para el capítulo 11: Ryrie (<em>Dispensacionalismo hoy</em>), la Biblia anotada de Scofield, la Confesión de Westminster (cap. 7), Berkhof (<em>Teología sistemática</em>), Gentry y Wellum (<em>Kingdom through Covenant</em>). Verificar ediciones en español.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Localizar <em>Testimonios para los ministros</em>, p. 91, en la edición en español ("un preciosísimo mensaje").</li>
+</ul>
+  </article>
+</div>
+
+<footer class="site-footer">
+  Plan del libro · documento de trabajo del autor, generado con Claude. Última actualización: 25 de septiembre de 2026.
+</footer>
+</body>
+</html>
